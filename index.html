@@ -1,62 +1,118 @@
 <html>
-    <head>
+<head>
 
-    </head>
+    <link rel="stylesheet" href="reset.css"/>
+    <link rel="stylesheet" href="box-sizing.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
 
-    <body>
-       <h1>Nossa app</h1>
-       <ul id="estudantes">
-           <li id="template" style="display: none" >
-               <div></div>
-               <ol>
+<body>
+<div class="wrapper row">
 
-               </ol>
-               <input class="new-task" type="text" placeholder="Adicionar tarefa" ><input type="button" value="+" onclick="addTarefa(this)">
-           </li>
-           <li>
-               <div>Bruno</div>
-               <ol>
-                    <li><input type="checkbox"> Colocar fundo pink em pequenas telas</li>
-               </ol>
-               <input class="new-task" type="text" placeholder="Adicionar tarefa" ><input type="button" value="+" onclick="addTarefa(this)">
-           </li>
-           <li>
-               <div>Zuleide</div>
-               <ol>
-                   <li><input type="checkbox"> Exportar codigo JS e importar o arquivo no html</li>
-                   <li><input type="checkbox"> Cor de fundo das taregas cinza</li>
-               </ol>
-               <input class="new-task" type="text" placeholder="Adicionar tarefa" ><input type="button" value="+" onclick="addTarefa(this)">
-           </li>
-           <li>
-               <div>Tanizia</div>
-               <ol>
-                   <li><input type="checkbox"> Alterar a lista para cards retangulares e adaptaveis a varios tamanhos de telas</li>
-               </ol>
-               <input class="new-task" type="text" placeholder="Adicionar tarefa" ><input type="button" value="+" onclick="addTarefa(this)">
-           </li>
-       </ul>
-     <input type="text" placeholder="Adicionar estudante" id="nome-estudante"><input type="button" value="+" id="add-btn">
-    </body>
+    <header>
+        <h1>Nossa app</h1>
+    </header>
 
+    <main>
+        <section class="students">
+
+            <div class="student">
+                <section class="card">
+                    <header>nome estudanteo</header>
+                    <ol>
+                        <li>dasdasd</li>
+                        <li>dasdasd</li>
+                        <li>dasdasd</li>
+                    </ol>
+                </section>
+                <form>
+                    <input type="text">
+                    <button>+</button>
+                </form>
+            </div>
+
+            <div class="student">
+                <section class="card">
+                    <header>nome estudanteo</header>
+                    <ol>
+                        <li>dasdasd</li>
+                        <li>dasdasd</li>
+                        <li>dasdasd</li>
+                    </ol>
+                </section>
+                <form>
+                    <input type="text">
+                    <button>+</button>
+                </form>
+            </div>
+
+            <div class="student">
+                <section class="card">
+                    <header>nome estudanteo</header>
+                    <ol>
+                        <li>dasdasd</li>
+                        <li>dasdasd</li>
+                        <li>dasdasd</li>
+                    </ol>
+                </section>
+                <form>
+                    <input type="text">
+                    <button>+</button>
+                </form>
+            </div>
+
+            <div class="student">
+                <section class="card">
+                    <header>nome estudanteo</header>
+                    <ol>
+                        <li>dasdasd</li>
+                        <li>dasdasd</li>
+                        <li>dasdasd</li>
+                    </ol>
+                </section>
+                <form>
+                    <input type="text">
+                    <button>+</button>
+                </form>
+            </div>
+
+            <div class="student">
+                <section class="card">
+                    <header>nome estudanteo</header>
+                    <ol>
+                        <li>dasdasd</li>
+                        <li>dasdasd</li>
+                        <li>dasdasd</li>
+                    </ol>
+                </section>
+                <form>
+                    <input type="text">
+                    <button>+</button>
+                </form>
+            </div>
+        </section>
+    </main>
     <footer>
 
     </footer>
+</div>
+</body>
 <script>
 
     const btn = document.getElementById('add-btn')
-    btn.addEventListener('click',  () => {
+    btn.addEventListener('click', (e) => {
         const estudante = document.getElementById('template').cloneNode(true)
         estudante.style.display = 'block'
         estudante.querySelector('div').textContent = document.getElementById('nome-estudante').value
-       document.getElementById('estudantes').append(estudante)
+        document.querySelector('[data-js="estudantes"]').append(estudante)
     })
 
 
-    function addTarefa(e){
+    function addTarefa(e) {
         const novaTarefa = document.createElement('li')
-        novaTarefa.textContent = e.parentNode.querySelector('.new-task' ).value
-        e.parentNode.querySelector('ol' ).append(novaTarefa)
+        novaTarefa.textContent = e.parentNode.querySelector('.new-task').value
+        e.parentNode.querySelector('ol').append(novaTarefa)
     }
 
 </script>
