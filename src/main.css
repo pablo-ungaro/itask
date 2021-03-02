@@ -1,0 +1,43 @@
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+.row {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Students */
+.students{
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap row;
+}
+
+.student{
+  background: #FFFFFF;
+  border: 1px solid #648594;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  flex-basis: 100%;
+}
+
+@media(min-width: 48rem) {
+  .student{
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+@media(min-width: 99.2rem) {
+  .student{
+    flex-basis: 33.3%;
+    max-width: 33.3%;
+  }
+}
+
