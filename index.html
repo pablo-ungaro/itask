@@ -1,63 +1,76 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <title>iTask</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
-       <h1>Nossa app</h1>
+        <h1>iTask</h1>
+        <div class="input-group"><input type="text" placeholder="Adicionar estudante" id= "nome-estudante"><input type="button" value="+" id="add-btn" class="button"></div>
+
        <ul id="estudantes">
            <li id="template" style="display: none" >
-               <div></div>
+               <h2></h2>
                <ol>
 
                </ol>
-               <input class="new-task" type="text" placeholder="Adicionar tarefa" ><input type="button" value="+" onclick="addTarefa(this)">
+               <div class="input-group task"><input class="new-task" type="text" placeholder="Adicionar tarefa" ><input type="button" value="+" onclick="addTarefa(this)"></div>
            </li>
            <li>
-               <div>Bruno</div>
+               <h2>Bruno</h2>
                <ol>
-                    <li><input type="checkbox"> Colocar fundo pink em pequenas telas</li>
+                    <li><input type="checkbox"/><span>Colocar fundo pink em pequenas telas</span></li>
                </ol>
-               <input class="new-task" type="text" placeholder="Adicionar tarefa" ><input type="button" value="+" onclick="addTarefa(this)">
+               <div class="input-group task"><input class="new-task" type="text" placeholder="Adicionar tarefa" ><input type="button" value="+" onclick="addTarefa(this)"></div>
            </li>
            <li>
-               <div>Zuleide</div>
+               <h2>Zuleide</h2>
                <ol>
-                   <li><input type="checkbox"> Exportar codigo JS e importar o arquivo no html</li>
-                   <li><input type="checkbox"> Cor de fundo das taregas cinza</li>
+                   <li><input type="checkbox"><span>Exportar codigo JS e importar o arquivo no html</span></li>
+                   <li><input type="checkbox"><span>Cor de fundo das taregas cinza</span></li>
                </ol>
-               <input class="new-task" type="text" placeholder="Adicionar tarefa" ><input type="button" value="+" onclick="addTarefa(this)">
+               <div class="input-group task"><input class="new-task" type="text" placeholder="Adicionar tarefa" ><input type="button" value="+" onclick="addTarefa(this)"></div>
            </li>
            <li>
-               <div>Tanizia</div>
+               <h2>Tanizia</h2>
                <ol>
-                   <li><input type="checkbox"> Alterar a lista para cards retangulares e adaptaveis a varios tamanhos de telas</li>
+                   <li><input type="checkbox"><span>Alterar a lista para cards retangulares e adaptaveis a varios tamanhos de telas</span></li>
                </ol>
-               <input class="new-task" type="text" placeholder="Adicionar tarefa" ><input type="button" value="+" onclick="addTarefa(this)">
+               <div class="input-group task"><input class="new-task" type="text" placeholder="Adicionar tarefa" ><input type="button" value="+" onclick="addTarefa(this)"></div>
            </li>
        </ul>
-     <input type="text" placeholder="Adicionar estudante" id="nome-estudante"><input type="button" value="+" id="add-btn">
+
+       <footer></footer>
+
+       <script>
+
+        const btn = document.getElementById('add-btn')
+
+        btn.addEventListener('click',  () => {
+            if(!document.getElementById('nome-estudante').value) return alert("Campo vazio! Por favor preencher")
+            const estudante = document.getElementById('template').cloneNode(true)
+            estudante.style.display = 'block'
+            estudante.querySelector('h2').textContent = document.getElementById('nome-estudante').value
+            document.getElementById('estudantes').append(estudante)
+            document.getElementById('nome-estudante').value = ""
+        })
+    
+        function addTarefa(e){
+            if(!e.parentNode.querySelector('.new-task' ).value) return alert("Campo vazio! Por favor preencher")
+            const novaTarefa = document.createElement('li')
+            const checkbox = document.createElement('input')
+            const text = document.createElement('span')
+            text.textContent = e.parentNode.querySelector('.new-task' ).value
+            checkbox.setAttribute('type', 'checkbox')
+            novaTarefa.append(checkbox, text)
+            e.parentNode.parentNode.querySelector('ol' ).append(novaTarefa)
+            e.parentNode.querySelector('.new-task' ).value = ""
+        }
+    
+    </script>
     </body>
-
-    <footer>
-
-    </footer>
-<script>
-
-    const btn = document.getElementById('add-btn')
-    btn.addEventListener('click',  () => {
-        const estudante = document.getElementById('template').cloneNode(true)
-        estudante.style.display = 'block'
-        estudante.querySelector('div').textContent = document.getElementById('nome-estudante').value
-       document.getElementById('estudantes').append(estudante)
-    })
-
-
-    function addTarefa(e){
-        const novaTarefa = document.createElement('li')
-        novaTarefa.textContent = e.parentNode.querySelector('.new-task' ).value
-        e.parentNode.querySelector('ol' ).append(novaTarefa)
-    }
-
-</script>
 </html>
