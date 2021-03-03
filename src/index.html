@@ -10,84 +10,78 @@
   </head>
   <body>
     <div class="wrapper row">
-      <header>
-        <h1>Nossa app</h1>
+      <header class="header">
+        <h1 class="logo">iTasks</h1>
       </header>
       <main>
-        <section class="students">
-          <div class="student">
-            <section class="card">
-              <header>nome estudanteo</header>
-              <ol>
-                <li>dasdasd</li>
-                <li>dasdasd</li>
-                <li>dasdasd</li>
-              </ol>
-            </section>
-            <form>
-              <input type="text">
-              <button>+</button>
-            </form>
-          </div>
-          <div class="student">
-            <section class="card">
-              <header>nome estudanteo</header>
-              <ol>
-                <li>dasdasd</li>
-                <li>dasdasd</li>
-                <li>dasdasd</li>
-              </ol>
-            </section>
-            <form>
-              <input type="text">
-              <button>+</button>
-            </form>
-          </div>
-          <div class="student">
-            <section class="card">
-              <header>nome estudanteo</header>
-              <ol>
-                <li>dasdasd</li>
-                <li>dasdasd</li>
-                <li>dasdasd</li>
-              </ol>
-            </section>
-            <form>
-              <input type="text">
-              <button>+</button>
-            </form>
-          </div>
-          <div class="student">
-            <section class="card">
-              <header>nome estudanteo</header>
-              <ol>
-                <li>dasdasd</li>
-                <li>dasdasd</li>
-                <li>dasdasd</li>
-              </ol>
-            </section>
-            <form>
-              <input type="text">
-              <button>+</button>
-            </form>
-          </div>
-        </section>
+        <form class="form">
+          <p class="form-group">
+            <input placeholder="adicionar estudante" type="text" class="form-field" />
+            <button class="form-submit">
+              <svg class="form-submit-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 448"><defs/><path d="M408 184H272a8 8 0 01-8-8V40c0-22.09-17.91-40-40-40s-40 17.91-40 40v136a8 8 0 01-8 8H40c-22.09 0-40 17.91-40 40s17.91 40 40 40h136a8 8 0 018 8v136c0 22.09 17.91 40 40 40s40-17.91 40-40V272a8 8 0 018-8h136c22.09 0 40-17.91 40-40s-17.91-40-40-40zm0 0"/></svg>
+            </button>
+          </p>
+        </form>
+<!--        <section class="students">-->
+<!--          <div class="student">-->
+<!--            <section class="card">-->
+<!--              <header>nome estudanteo</header>-->
+<!--              <ol>-->
+<!--                <li>dasdasd</li>-->
+<!--                <li>dasdasd</li>-->
+<!--                <li>dasdasd</li>-->
+<!--              </ol>-->
+<!--            </section>-->
+<!--            <form>-->
+<!--              <input type="text">-->
+<!--              <button>+</button>-->
+<!--            </form>-->
+<!--          </div>-->
+<!--          <div class="student">-->
+<!--            <section class="card">-->
+<!--              <header>nome estudanteo</header>-->
+<!--              <ol>-->
+<!--                <li>dasdasd</li>-->
+<!--                <li>dasdasd</li>-->
+<!--                <li>dasdasd</li>-->
+<!--              </ol>-->
+<!--            </section>-->
+<!--            <form>-->
+<!--              <input type="text">-->
+<!--              <button>+</button>-->
+<!--            </form>-->
+<!--          </div>-->
+<!--          <div class="student">-->
+<!--            <section class="card">-->
+<!--              <header>nome estudanteo</header>-->
+<!--              <ol>-->
+<!--                <li>dasdasd</li>-->
+<!--                <li>dasdasd</li>-->
+<!--                <li>dasdasd</li>-->
+<!--              </ol>-->
+<!--            </section>-->
+<!--            <form>-->
+<!--              <input type="text">-->
+<!--              <button>+</button>-->
+<!--            </form>-->
+<!--          </div>-->
+<!--          <div class="student">-->
+<!--            <section class="card">-->
+<!--              <header>nome estudanteo</header>-->
+<!--              <ol>-->
+<!--                <li>dasdasd</li>-->
+<!--                <li>dasdasd</li>-->
+<!--                <li>dasdasd</li>-->
+<!--              </ol>-->
+<!--            </section>-->
+<!--            <form>-->
+<!--              <input type="text">-->
+<!--              <button>+</button>-->
+<!--            </form>-->
+<!--          </div>-->
+<!--        </section>-->
       </main>
     </div>
-    <script>
-      const btn = document.getElementById('add-btn')
-      btn.addEventListener('click', (e) => {
-        const estudante = document.getElementById('template').cloneNode(true)
-        estudante.style.display = 'block'
-        estudante.querySelector('div').textContent = document.getElementById('nome-estudante').value
-        document.querySelector('[data-js="estudantes"]').append(estudante)
-      })
-
-      function addTarefa(e) {
-        const novaTarefa = document.createElement('li')
-        novaTarefa.textContent = e.parentNode.querySelector('.new-task').value
-        e.parentNode.querySelector('ol').append(novaTarefa)
-      }
-    </script>
+    <script src="main.js"/>
   </body>
 </html>

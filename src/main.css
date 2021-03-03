@@ -1,10 +1,77 @@
-html{
+html {
   font-size: 62.5%;
 }
 
-body{
+body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
+}
+
+.wrapper {
+  padding: 0 1rem;
+}
+
+@media (min-width: 99.2rem) {
+  .wrapper {
+    padding: 0;
+  }
+}
+
+.header {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 76.8rem) {
+  .header {
+    margin-bottom: 5rem;
+  }
+}
+
+.logo {
+  color: #32505E;
+  font-weight: 700;
+  font-size: 4.8rem;
+}
+
+.form {
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .form {
+    width: 33.3%;
+  }
+}
+
+.form-group {
+  display: flex;
+  width: 100%;
+}
+
+.form-field {
+  height: 5rem;
+  width: 100%;
+  border-radius: 0.4rem 0 0.4rem 0;
+  border: 1px solid #648594;
+  border-right: none;
+  padding: 1rem;
+  color: #333333;
+  font-size: 1.6rem;
+  line-height:1;
+  outline: none;
+}
+
+.form-submit {
+  border-radius: 0 4px 4px 0;
+  outline: none;
+  width: 5rem;
+  height: 5rem;
+  background-color: #648594;
+}
+
+.form-submit-icon {
+  fill: #FFF;
 }
 
 .row {
@@ -13,31 +80,46 @@ body{
 }
 
 /* Students */
-.students{
+.students {
   display: flex;
   flex-direction: row;
   flex-flow: wrap row;
+  margin: 0 -1rem;
 }
 
-.student{
-  background: #FFFFFF;
+.student {
+  flex-basis: 100%;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.card {
   border: 1px solid #648594;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  flex-basis: 100%;
 }
 
-@media(min-width: 48rem) {
-  .student{
+@media (min-width: 48rem) {
+  .student {
     flex-basis: 50%;
     max-width: 50%;
   }
 }
 
-@media(min-width: 99.2rem) {
-  .student{
+@media (min-width: 99.2rem) {
+  .student {
     flex-basis: 33.3%;
     max-width: 33.3%;
   }
 }
 
+-webkit-input-placeholder {
+  color: #CCCCCC;
+}
+
+::-ms-input-placeholder {
+  color: #CCCCCC;
+}
+
+::placeholder {
+  color: #CCCCCC;
+}
