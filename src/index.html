@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <title>iTasks</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css"/>
+    <link rel="stylesheet" href="box-sizing.css"/>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="wrapper row">
+      <header>
+        <h1>Nossa app</h1>
+      </header>
+      <main>
+        <section class="students">
+          <div class="student">
+            <section class="card">
+              <header>nome estudanteo</header>
+              <ol>
+                <li>dasdasd</li>
+                <li>dasdasd</li>
+                <li>dasdasd</li>
+              </ol>
+            </section>
+            <form>
+              <input type="text">
+              <button>+</button>
+            </form>
+          </div>
+          <div class="student">
+            <section class="card">
+              <header>nome estudanteo</header>
+              <ol>
+                <li>dasdasd</li>
+                <li>dasdasd</li>
+                <li>dasdasd</li>
+              </ol>
+            </section>
+            <form>
+              <input type="text">
+              <button>+</button>
+            </form>
+          </div>
+          <div class="student">
+            <section class="card">
+              <header>nome estudanteo</header>
+              <ol>
+                <li>dasdasd</li>
+                <li>dasdasd</li>
+                <li>dasdasd</li>
+              </ol>
+            </section>
+            <form>
+              <input type="text">
+              <button>+</button>
+            </form>
+          </div>
+          <div class="student">
+            <section class="card">
+              <header>nome estudanteo</header>
+              <ol>
+                <li>dasdasd</li>
+                <li>dasdasd</li>
+                <li>dasdasd</li>
+              </ol>
+            </section>
+            <form>
+              <input type="text">
+              <button>+</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      const btn = document.getElementById('add-btn')
+      btn.addEventListener('click', (e) => {
+        const estudante = document.getElementById('template').cloneNode(true)
+        estudante.style.display = 'block'
+        estudante.querySelector('div').textContent = document.getElementById('nome-estudante').value
+        document.querySelector('[data-js="estudantes"]').append(estudante)
+      })
+
+      function addTarefa(e) {
+        const novaTarefa = document.createElement('li')
+        novaTarefa.textContent = e.parentNode.querySelector('.new-task').value
+        e.parentNode.querySelector('ol').append(novaTarefa)
+      }
+    </script>
+  </body>
+</html>
