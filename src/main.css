@@ -46,19 +46,21 @@ body {
 
 .form-group {
   display: flex;
+  position: relative;
   width: 100%;
 }
 
 .form-field {
   height: 5rem;
   width: 100%;
-  border-radius: 0.4rem 0 0.4rem 0;
+  border-radius: 0.4rem 0 0 0.4rem;
   border: 1px solid #648594;
   border-right: none;
+  margin-right: 5rem;
   padding: 1rem;
   color: #333333;
   font-size: 1.6rem;
-  line-height:1;
+  line-height: 1;
   outline: none;
 }
 
@@ -68,6 +70,8 @@ body {
   width: 5rem;
   height: 5rem;
   background-color: #648594;
+  position: absolute;
+  right: 0;
 }
 
 .form-submit-icon {
