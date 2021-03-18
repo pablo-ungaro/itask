@@ -1,0 +1,136 @@
+:root {
+  --primary-color: #648594;
+  --secondary-color: #f1f1f1;
+  --tertiary-color: #32505E;
+}
+
+body {
+  width: 90vw;
+  max-width: 1092px;
+  margin: 50px auto;
+}
+
+h1 {
+  color: var(--tertiary-color);
+  margin-bottom: 32px;
+  font-size: 2rem;
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+}
+
+input.new-task, input#nome-estudante {
+  border: 1px solid var(--primary-color);
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 6px 0 0 6px;
+  width: 100%;
+}
+
+input.button {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 27px;
+  border: none;
+  padding: 4px 10px;
+  font-weight: bold;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  transition: all ease-in-out 200ms;
+}
+
+input.button:hover {
+  background-color: #6d818d;
+}
+
+input.new-task:focus, input#nome-estudante:focus, input.button:focus {
+  outline: none;
+}
+
+ul#estudantes {
+  margin: 32px auto;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+ul#estudantes > li {
+  margin-bottom: 50px;
+  border: 1px solid var(--primary-color);
+  position: relative;
+  border-radius: 6px;
+  padding: 8px;
+  margin-top: 32px;
+}
+
+ul#estudantes > li:nth-of-type(2) {
+  margin-top: 0;
+}
+
+ul#estudantes > li h2 {
+  font-size: 1rem;
+  background-color: var(--secondary-color);
+  padding: 6px 12px;
+  font-weight: 700;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+
+ul#estudantes ol {
+  list-style: none;
+  height: 180px;
+  overflow-y: auto;
+}
+
+ul#estudantes ol li {
+  margin-bottom: 12px;
+  font-size: .85rem;
+  color: var(--primary-color);
+}
+
+ul#estudantes ol li input.input_checkbox:checked + span{
+  color: #C0C0C0;
+  text-decoration:line-through;
+}
+
+ul#estudantes ol li span {
+  margin-left: 4px;
+}
+
+.input-group.task {
+  position: absolute;
+  bottom: -48px;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+@media only screen and (min-width: 500px) {
+  ul#estudantes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  ul#estudantes > li {
+    margin-top: 0;
+  }
+
+  .input-group {
+    width: 48%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  
+  .input-group {
+    width: 31.5%;
+  }
+
+  ul#estudantes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>iTask</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./reset.css">
+        <link rel="stylesheet" href="./box-sizing.css">
+        <link rel="stylesheet" href="./main.css">
+    </head>
+
+    <body>
+        <h1>iTask</h1>
+        <div class="input-group"><input type="text" placeholder="Adicionar estudante" id= "nome-estudante"><input type="button" value="+" id="add-btn" class="button"></div>
+
+       <ul id="estudantes">
+           <li id="template" style="display: none" >
+               <h2></h2>
+               <ol>
+
+               </ol>
+               <div class="input-group task"><input class="new-task" type="text" placeholder="Adicionar tarefa" ><input type="button" value="+"  class="button" onclick="addTarefa(this)"></div>
+           </li>
+           <li>
+               <h2>Bruno</h2>
+               <ol>
+                    <li><input type="checkbox" class="input_checkbox"/><span>Colocar fundo pink em pequenas telas</span></li>
+               </ol>
+               <div class="input-group task"><input class="new-task" type="text" placeholder="Adicionar tarefa" ><input type="button" value="+" class="button" onclick="addTarefa(this)"></div>
+           </li>
+           <li>
+               <h2>Zuleide</h2>
+               <ol>
+                   <li><input type="checkbox" class="input_checkbox"><span>Exportar codigo JS e importar o arquivo no html</span></li>
+                   <li><input type="checkbox" class="input_checkbox"><span>Cor de fundo das taregas cinza</span></li>
+               </ol>
+               <div class="input-group task"><input class="new-task" type="text" placeholder="Adicionar tarefa" ><input type="button" value="+" class="button" onclick="addTarefa(this)"></div>
+           </li>
+           <li>
+               <h2>Tanizia</h2>
+               <ol>
+                   <li><input type="checkbox" class="input_checkbox"><span>Alterar a lista para cards retangulares e adaptaveis a varios tamanhos de telas</span></li>
+               </ol>
+               <div class="input-group task"><input class="new-task" type="text" placeholder="Adicionar tarefa" ><input type="button" value="+" class="button" onclick="addTarefa(this)"></div>
+           </li>
+       </ul>
+
+       <footer></footer>
+
+       <script src="./main.js"> </script>
+    </body>
+</html>
