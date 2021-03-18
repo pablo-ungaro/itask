@@ -1,0 +1,16 @@
+com/br/gb/itask/repository/StudentRepository.java
+ com.br.gb.itask.repository.StudentRepository
+com/br/gb/itask/domain/Student.java
+ com.br.gb.itask.domain.Student
+com/br/gb/itask/ItaskApplication.java
+ com.br.gb.itask.ItaskApplication
+com/br/gb/itask/domain/Task.java
+ com.br.gb.itask.domain.Task
+com/br/gb/itask/service/StudentService.java
+ com.br.gb.itask.service.StudentService
+com/br/gb/itask/repository/TaskRepository.java
+ com.br.gb.itask.repository.TaskRepository
+com/br/gb/itask/service/TaskService.java
+ com.br.gb.itask.service.TaskService
+com/br/gb/itask/controller/StudentController.java
+ com.br.gb.itask.controller.StudentController
